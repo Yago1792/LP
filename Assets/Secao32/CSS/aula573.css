@@ -1,0 +1,8 @@
+/*Pseudo-classe de NEGACAO/EXLUSAO*/
+p:not(.meio) {
+    color:blue;
+}
+
+input:not(:checked) + p {
+    background-color: yellow;
+}

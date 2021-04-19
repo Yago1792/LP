@@ -1,0 +1,11 @@
+/*Iremos reparar que todos os filhos e assim por diante do body irao herdar essas caracteristicas*/
+body {
+    color: red;
+    font-family: sans-serif;
+    font-size: 25px;
+}
+
+p {
+    font-size: initial; /*desativa a heranca, deixa a caracteristica como a caracteristica inicial do elemento*/
+    color: inherit; /*ativa heranca*/
+}

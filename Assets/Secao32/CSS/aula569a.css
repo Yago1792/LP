@@ -1,0 +1,22 @@
+/* Seletor ALL - representacao: asterisco*/
+* {
+    margin: 0;  /*Geralmente se zera as margens e os preenchimentos*/
+    padding: 0; /*de todas as estruturas antes de comecar um codigo*/
+}
+
+/* Seletor por tag - representacao: nomedatag (SOMENTE) */
+p {
+    color:blue;
+}
+
+/* Selecao de dependentes - especifica o caminho no codigo onde
+vai ser aplicado o CSS*/
+body div section p {
+    color: red;
+}
+
+/* Selecao multiplca - Seleciona mais de uma estrutura a se aplicar o CSS*/
+body div section p,
+body div section h1 {
+    color: green;
+}

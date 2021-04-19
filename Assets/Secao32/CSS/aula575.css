@@ -1,0 +1,29 @@
+ul li::after {
+    content: "-";
+    background-color: yellow;
+}
+
+ul li::before {
+    content: "-";
+    background-color:green;
+}
+
+p::first-letter {
+    font-size: 150px;
+    display: block;
+    float: left;
+    margin: 0 10px 10px 0;
+}
+
+p::first-line {
+    background-color: yellow;
+}
+
+p::selection {
+    background-color: black;
+    color: purple;
+}
+
+.formfield::placeholder {
+    color:rgba(255,0,0,0.5);
+}

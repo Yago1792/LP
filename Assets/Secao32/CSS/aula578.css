@@ -1,0 +1,46 @@
+.divblock {
+    display: block; /*Por padrao ela ja vem display block, nao precisava dessa linha*/
+    background: red;
+    width: 200px ; /*largura afeta APENAS o conteudo. Nao afeta margem, nao afeta paddiing. Podemos mudar isso com alguns outros comandos*/ 
+    height: 200px;
+    overflow-y:hidden; /*Conteudos que dao overflow (transbordam) ficam escondidos dentro da div. Tipos de overflow: hidden, scroll, auto, etc*/
+
+    /*propriedas que controlam o tamanho do CONTENT*/
+    /*widht, height como ja vimos*/
+    max-width: 100%;
+    max-height: 100%;
+    min-width: 0;
+    min-height: 0;
+
+}
+
+.divinline {
+    display: inline; /*A div com display inline passa a nao alguns atributos, pois o navegador entende que ela é uma estrutura continuada. Assim, nao tem tamanho, nem largura, na background */ 
+    background: red; /*Inutil*/
+    width: 50% ; /*Inutil*/
+}
+
+.unidades {
+    background: red;
+    width: 200px ; /*px nao é responsivo, é X pixels e pronto, fixo.*/
+    width: 100% ; /*% sera responsivo e ira ocupar sempre de acordo com o tamanho maximo da tela. Porem em grandes telas, pode ficar grande demais. Pra isso, usamos o max-width: para colocar um limite;*/
+    max-width: 900px;
+    margin: 0 auto;  /*Porem com isso, ele ira ficar na esquerda da tela, para consertar isso, colocamos uma margem automatica para que ela se ajude ao centro da tela sempre*/
+    
+    height: 100%;
+    max-height: 900px;
+    min-width: 0;
+    min-height: 0;
+    overflow:auto;
+    
+    box-sizing: border-box; /* content-box: Border, padding, e margin serao adicionados pra fora do content.
+                                padding-box: padding sera acrescentado pra dentro do limite externo do padding.
+                                border-box: bordas, paddiings e conteudo sera adicionador pra dentro a partir do limite da BORDA. 
+
+                                ou seja: content-box > caixa fechada e fixa a partir do limite  externo do conteudo
+                                padding-box > caixa fechada e fixa a partir do limite externo do paddinig
+                                border-box > caixa fechada a partir do limite externo da borda
+    */
+    padding:50px;
+    border: 5px solid black;
+}

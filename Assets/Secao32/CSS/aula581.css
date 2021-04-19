@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding:0;
+    scroll-behavior: smooth;
+}
+
+/*Absolute Lengths*/
+/* cm	centimeters
+mm	millimeters
+in	inches (1in = 96px = 2.54cm)
+px *	pixels (1px = 1/96th of 1in)
+pt	points (1pt = 1/72 of 1in)
+pc	picas (1pc = 12 pt) */
+
+/* Relative Lengths
+em	Relative to the font-size of the element (2em means 2 times the size of the current font)	
+ex	Relative to the x-height of the current font (rarely used)	
+ch	Relative to the width of the "0" (zero)	
+rem	Relative to font-size of the root element	
+vw	Relative to 1% of the width of the viewport*	
+vh	Relative to 1% of the height of the viewport*	
+vmin	Relative to 1% of viewport's* smaller dimension	
+vmax	Relative to 1% of viewport's* larger dimension	
+%	Relative to the parent element */
+
+html {
+    font-size: 62.5%;
+}
+
+.pixel {
+    font-size: 20px; /*O paragrafo nao se baseia em relacao a nada para colocar 20 pixeis na fonte*/
+}
+
+.pai {
+    font-size: 40px;
+}
+
+.em {
+    font-size: 0.5em; /*O paragrafo se baseia a font-size em 0.5 da fonte do PAI dele ou seja: 40px*0.5em=20px*/
+}
+
+/*.rem {
+    font-size: 0.25rem; 
+    }
+    
+    O paragrafo se baseia a font-size em 0.5 do elemento ROOT ou seja: 40px*0.5em=20px C
+    
+    COMENTEI PQ VAMOS ALTER A FONTE DO ROOT PARA FAZER A CONFIGURACAO INTELIGENTE*/
+
+.paismartcfg {
+    width: 30rem;
+    height: 30rem;
+    background: yellow;
+
+}
+
+.smartcfg {
+    font-size: 1.6rem;
+
+    /*Por padrao, o navegador deixa font-size=16px, sendo assim, se colocamos o font-size do html em 62,5%, ele joga 16px*0,625=10px. Assim, temos a font padrao do navegador (root) igual a 10px. Agora podemos usar o REM como uma medida absoluta que se comporta de forma relativa, onde cada 1 rem = 10px*/
+}
+
+.paivw {
+    width: 33.33vw; /*1/3 do View Port*/
+    height: 50vh; /*1/2 do View Port*/
+    background: blue;
+}
+
+.vw {
+    font-size: 2.5vw; /*cada 1 vw/vw = 1% do viewport (tamanho da tela)*/
+}
+
+p {
+    font-size: 1.6rem;
+}
+.paianc {
+    height: 100vh;
+    background: blueviolet;    
+}
+
+.color-one {
+    height: 100vh;
+    background: turquoise;    
+}
+
+.color-two {
+    height: 100vh;
+    background: green;   
+}
+
+.color-three {
+    height: 100vh;
+    background: violet;   
+}
+
+
+.paipercent {
+    width: 50rem; /*50x10px=500px*/
+    height: 100vh;
+    background: royalblue;
+}
+
+.percent {
+    width: 50%; /* 50% do elemento pai = 50remx0,5 = 25rem = 250px*/
+    height: 25%; /*25% do elemento PAI = 100vhx0,5=25%vh*/
+    background: red;
+}
+
+/* font-size: 2vmax (2% do maior largura do viewport) 
+   font-sizez: 2vmin (2% do menor lado do viewport) */

@@ -1,0 +1,32 @@
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    /*grid-template-columns: 1fr 1fr 1fr; /*1 dimensao pra cada coluna*/
+    grid-template-columns: repeat(auto-fill, minmax(240px,1fr));
+   /*grid-template-rows: repeat(2, 1fr 2fr);*/
+    gap: 30px;
+}
+
+.grid div {
+    background: darkviolet;
+    min-height: 50px;
+}
+.grid div:nth-child(5) {
+    background: green;
+    grid-row: span 3;
+    grid-column: span 2;
+}
+
+.grid div:nth-child(6) {
+    background: yellow;
+    grid-row: span 3;
+    grid-column: span 1;
+}

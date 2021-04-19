@@ -1,0 +1,41 @@
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    /*grid-template-columns: 1fr 1fr 1fr; /*1 dimensao pra cada coluna*/
+    grid-template-columns: 
+        [um] 1fr 
+        [dois] 1fr 
+        [tres] 1fr 
+        [quatro];
+grid-template-rows: 
+        [um] 1fr 
+        [dois] 1fr 
+        [tres] 1fr 
+        [quatro];
+   /*grid-template-rows: repeat(2, 1fr 2fr);*/
+    gap: 30px;
+}
+
+.grid div {
+    background: darkviolet;
+    min-height: 50px;
+}
+.grid div:nth-child(5) {
+    background: green;
+    /*grid-column-start: um;
+    grid-column-end: quatro;*/
+
+    /*grid-column: span 2 / 3;
+    grid-row: um / quatro; ->>> atalho, para esses 2 comandos, abaixo:*/
+
+    grid-area: um / um / quatro / tres; 
+    /* row-start / col-start / row-end / col-end*/
+}

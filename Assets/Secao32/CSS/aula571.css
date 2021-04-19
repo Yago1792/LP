@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*Para pegar um valor especifico caso um atributo tenha mais de um valor, usa-se o ~= */
+[meu-atributo~="valor2"] { 
+    color: red;
+}
+
+/*Para pegar um valor especifico caso um atributo tenha valor seguido de um traço, usa-se |= */
+[meu-atributo|="valor"] { 
+    color: blue;
+}
+
+/*Para pegar um valor especifico caso um atributo começe com um valor, usa-se ^= */
+[meu-atributo^="come"] { 
+    color: greenyellow;
+}
+
+/*Para pegar um valor especifico caso um atributo termine com um valor, usa-se  $= */
+[meu-atributo$="ine"] { 
+    color: pink;
+}
+
+/*Para pegar um valor especifico caso um atributo contem um valor, usa-se  *= */
+[meu-atributo*="ont"] { 
+    color: cyan;
+}
+
+
+
+

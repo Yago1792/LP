@@ -1,0 +1,39 @@
+* { 
+    margin: 0;
+    padding:0;
+    box-sizing: 0;
+}
+
+.flex-container-main-axis-x {
+    display:flex;
+    /*Por padrao o display flex tras essas configs:
+    flex-direction: row; -> indica direcao do eixo principal do flex.
+    justify-content: flex-start; -> ajusta itens de acordo com eixo principal
+    align-items: stretch; -> alinha itens de acordo com eixo perpendicular ao principal*/
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: yellow;
+    height: 640px;
+    flex-wrap: wrap; /*Quebra a linha caso nao caiba o elemento na tela*/
+    align-content: center; /*Alinha o conteudo de acordo com eixo perpendicular ao principals*/
+}
+
+.flex-item-x {
+    background-color: red;
+    width: 33.33%;
+}
+
+.flex-container-main-axis-y {
+    display:flex;
+    flex-direction: column;
+    justify-content:center; /*Eixo Principal*/
+    align-items: stretch; /*Eixo Perpendicular*/
+    background-color: blue;
+    height: 500px;
+}
+
+.flex-item-y {
+    background-color: green;
+    margin: 10px;
+    height: 100%;
+}

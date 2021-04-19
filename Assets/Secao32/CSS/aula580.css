@@ -1,0 +1,51 @@
+* {
+    margin: 1px;
+    padding:0;
+}
+
+.bigbox {
+    background: blue;}
+    
+.bigbox .caixa.hexa {
+    background: #09B501; /*2 primeiros F's = RED
+                             2 segundos F's = GREEN
+                             2 terceiros F's = BLUE*
+                             ABCDEF1234567890 */
+    height: 100px;
+    width: 100px;
+    float:left;
+}
+
+.bigbox .caixa.nome {
+    background: pink; /*pelo nome da cor em ingles*/
+    height: 100px;
+    width: 100px;
+    float:left;
+}
+
+.bigbox .caixa.rgb {
+    background: rgb(20,80,200); /*(Red,Green,Blue) valores de 0 a 255*/
+    height: 100px;
+    width: 100px;
+    float:left;
+}
+
+.bigbox .caixa.rgba {
+    background: rgb(20,80,200,0.2); /*(Red,Green,Blue,Alpha) valores de 0 a 255 onde o Alpha esta entre 0 e 1 e representa a opacidade da cor (transparencia)*/
+    height: 100px;
+    width: 100px;
+    float:left;
+}
+.bigbox .caixa.HSL {
+    background: HSL(284,100%,50%); /*(Hue,Saturation,Lightness) onde Hue esta entre 0 e 360, saturation de 0 a 100% e lightness de 0 a 100%*/
+    height: 100px;
+    width: 100px;
+    float:left;
+}
+
+.bigbox .caixa.HSLA {
+    background: HSL(284,100%,50%,0.2); /*(Hue,Saturation,Lightness,alpha) onde Hue esta entre 0 e 360, saturation de 0 a 100% e lightness de 0 a 100% e o alpha entre 0 e 1 representando a opacidade da cor (transparencia)*/
+    height: 100px;
+    width: 100px;
+    float:left;
+}

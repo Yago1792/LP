@@ -1,0 +1,13 @@
+/* -nth- child | Seleciona um grupo de irmaos e faz uma acao com ele*/
+ul li:nth-child(2) { /*seleciona os itens de indice 2*/
+    background-color: purple;
+}
+ul li:nth-child(odd) { /*seleciona os itens de indice impar(odd)*/
+    background-color: darkturquoise;
+}
+ul li:nth-child(3n) { /*seleciona de 3 em 3 itens*/
+    background-color: darkolivegreen;
+}
+ul li:nth-child(3n+10) { /*A partir do 10o elemento, seleciona de 3 em 3*/
+    background-color: red;
+}

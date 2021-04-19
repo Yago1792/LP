@@ -1,0 +1,48 @@
+/* Seletor ALL - representacao: asterisco*/
+* {
+    margin: 0;  /*Geralmente se zera as margens e os preenchimentos*/
+    padding: 0; /*de todas as estruturas antes de comecar um codigo*/
+}
+
+/* Selecionar por CLASSE - Rep: .class (ponto e o nome da classe)*/
+.color-red {
+    color: red;
+}
+
+/* Selecionar de dependentes por CLASSE - Rep: .class (ponto e o nome da classe)*/
+.main-content h2 {
+    font-style: italic;
+}
+
+/* Selecionar de dependentes de CLASSE dentro de outra CLASSE - Rep: .class .class (ponto e o nome da classe seguido da proxima classe)*/
+.main-content .heading {
+    color: red;
+}
+
+/* especifica em qual elemento com uma certa classe o CSS vai ser aplicado. rep: tag.classe. Exemplo:*/
+div.main-content h2.heading {
+    color: blue;
+}
+
+div{
+    margin-left: 20px;
+    font-style: initial;
+}
+
+.pai1 {
+    color: red; /*A filha herda a cor do pai*/
+}
+
+/*Selecao de uma tag com 2 classes ou mais. Rep: .class.class (colados)*/
+.pai2.filha2 {
+    color: blue;
+}
+
+/*Seletor de filhos diretos*/
+
+.pai3 > .filha3{
+    color: rebeccapurple;
+    font-style: italic;
+    margin-left: 50px;
+    
+}

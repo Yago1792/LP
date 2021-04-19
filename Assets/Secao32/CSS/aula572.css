@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    transition: all 1s ease-in-out; /*Transicoes de efeitos*/
+  
+}
+
+
+
+
+a {
+    color:darkorange;
+}
+
+/*PSEUDO CLASSES*/
+
+/*Estado:Mouse sobre o elemento :HOVER*/
+.heading:hover {
+    background-color: red;
+
+}
+
+/*Estado:Link nunca visitado :link*/
+a:link {
+    color: deeppink;
+}
+
+/*Estado:link JA visitado :visitado*/
+a:visited {
+    color: firebrick;
+}
+
+/*Estado: Estado ativado no momento, exemplo clique do mouse e segura :active*/
+a:active {
+    background-color:darkslategray;
+}
+
+/*Estado: Algum elemento esta em foco. :focus*/
+input:focus {
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    outline: none;
+    border: 1px solid black;
+}
+
+/*Estado: Elemento desativado. :disabled*/
+input:disabled {
+    background: grey;
+    cursor: not-allowed;
+}
+
+/*Estado: Elemento desativado. :disabled*/
+input:enabled {
+    width: 300px;
+}
+
+/*Estado: Elemento marcado. :checked*/
+input.botao1:checked {
+    width:50px;
+    height:50px;
+}
+
+/*Estado: alterar proximo elemento de acordo com primeiro :checked + irmao adjacente*/
+input:checked + p {
+    font-size: 30px;
+}
+
+/*Estado: Pega o primeiro filho de um elemento e edita. :first-child*/
+.pai .lista li:first-child {
+    background: red;
+}
+
+
+/*Estado: Pega o ultimo filho de um elemento e edita. :first-child*/
+.pai .lista li:last-child {
+    background: greenyellow;
+}
+
+.email:required {
+    color: red;
+    caret-color: red;
+}
+

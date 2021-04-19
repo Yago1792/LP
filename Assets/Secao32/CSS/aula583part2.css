@@ -1,0 +1,95 @@
+/*POSICIONAMENTO*/
+   /*Z-INDEX*/
+
+   /*Position:"Fixed e s*/
+
+* {
+    margin: 0;
+}
+
+.pai {
+    height:50vh; /*3x a altura do viewport*/
+
+}
+
+.filha1, .filha2 {
+    width: 3px;
+    height: 3px;
+    background: rgba(255, 0, 0, 0.445);
+    margin: 10px;
+    position: static;
+}
+
+.filha1 {
+    top:50px; /*Gostariamos que a partir do top, ela descesse 50px, mas como a position esta STATIC, isso nao mudou, para isso mudamos seu tipo de posicao*/
+    left: 50px; /*se fosse right: seria x pixels em relacao a direiita, assiim como top/bottom*/
+    position: absolute;
+
+    /*centralizando no meio da pagina*/
+
+    top:50%;
+    left: 50%;
+    margin-top: -75px; /*para levar o CENTRO da figura pro meio (largura dividida por 2*/
+    margin-left: -75px; /*para levar o CENTRO da figura pro meio (altura dividida por 2*/
+
+    /*Essa correcao de margin, se deve ao fato de o elemento é posicionado de acordo com o UNICO ponto que da comeco ao elemento, ou seja, o ponto SUPERIOR ESQUERDO, assim, todo corpo pro lado direito e abaixo desse ponto sera posicionado de acordo com o que pedimos na porcentagem*/
+    z-index: 2; /*Configura qual camada sera mais alta em relacao a eixo Z do navegador (ou seja, indices de camadas)*/
+
+}
+
+.filha2 {
+    background: greenyellow;
+    position: absolute;
+    z-index: -1;
+}
+
+.relative {
+    height: 300vh;
+}
+
+.relativef , .relativef2, .relativef3,.fixed{
+    width: 100px;
+    height: 100px;
+    position: static;
+}
+
+.relativef  {
+background-color: chocolate;
+}
+
+.relativef2 {
+    background-color: cadetblue;
+}
+
+.relativef3 {
+    background-color: chartreuse;
+    position: relative;
+    top:10px; /*Como ele é relativo, ele se move 10px pra baixo do top, em relacao ao elemento mais proximo dele, nesse caso, ao relativef2*/
+    left: 20px; /*Nesse caso, 20 px em relacao ao elemento mais proximo a esquerda, nesse caso, a margem do navegador*/
+} 
+
+.fixed {
+    background-color: rgb(238, 130, 238);
+    position: fixed; /*Funciona igual o absolute, mas fica fixado exatamente onde voce colocar, mesmo que o usuario role o navegador, ou seja, fixado NAQUELA posicao em relacao ao VIEWPORT*/
+    top:20%;
+    margin-top: -50px;
+}
+
+.outroelem {
+    position: absolute; /*posicao absoluta EM relacao ao elemento que contem ele, ou seja, em relacao a div relativef3*/
+    top:5px;
+    left:5px;
+    font-size: 50px;
+    background-color: turquoise;
+}
+
+ul {
+    height: 150px;
+    overflow-y: auto;
+}
+
+ul li.stick {
+    position: sticky;
+    background-color: grey;
+    top: 0;
+}

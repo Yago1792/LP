@@ -1,0 +1,46 @@
+/*POSICIONAMENTO*/
+/*  static - nao saira do lugar a nao ser que eu mude essa posicao.
+
+    relative: posicao relativa a outros elementos, mas ainda se comporta como um bloco, ele OCUPA seu espaco
+
+    absolute: posicao ABSOLUTA no navegador, é como se mudasse o elemento de camada, ele nao ocupa espaco no navegador e ele estara absolutamente onde voce mandar ele ficar sem atrapalhar o flow da pagina.
+    */
+    
+
+
+
+* {
+    margin: 0;
+}
+
+.pai {
+    height: 300vh; /*3x a altura do viewport*/
+
+}
+
+.filha1, .filha2 {
+    width: 150px;
+    height: 150px;
+    background: rgba(255, 0, 0, 0.445);
+    margin: 10px;
+    position: static;
+}
+
+.filha1 {
+    top:50px; /*Gostariamos que a partir do top, ela descesse 50px, mas como a position esta STATIC, isso nao mudou, para isso mudamos seu tipo de posicao*/
+    left: 50px; /*se fosse right: seria x pixels em relacao a direiita, assiim como top/bottom*/
+    position: absolute;
+
+    /*centralizando no meio da pagina*/
+
+    top:50%;
+    left: 50%;
+    margin-top: -75px; /*para levar o CENTRO da figura pro meio (largura dividida por 2*/
+    margin-left: -75px; /*para levar o CENTRO da figura pro meio (altura dividida por 2*/
+
+    /*Essa correcao de margin, se deve ao fato de o elemento é posicionado de acordo com o UNICO ponto que da comeco ao elemento, ou seja, o ponto SUPERIOR ESQUERDO, assim, todo corpo pro lado direito e abaixo desse ponto sera posicionado de acordo com o que pedimos na porcentagem*/
+}
+
+.filha2 {
+    background: greenyellow;
+}
